@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-basic-course-phuong",
+  "version": "1.0.0",
+  "description": "Assignments for NodeJS class @Nordic Coder 19/05 - 26/06/2019",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phuongt994/nodejs-basic-course-phuong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phuongt994/nodejs-basic-course-phuong/issues"
+  },
+  "homepage": "https://github.com/Phuongt994/nodejs-basic-course-phuong#readme"
+}

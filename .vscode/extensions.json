@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "coenraads.bracket-pair-colorizer",
+        "christian-kohler.path-intellisense",
+        "christian-kohler.npm-intellisense",
+    ]
+}
