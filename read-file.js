@@ -5,8 +5,8 @@ const formatDistance = require('date-fns/formatDistance');
 const format = require('date-fns/format');
 const xlsx = require('xlsx');
 
-const products = [];
 const main = () => {
+  const products = [];
   try {
     // Task 1
     const productJSON = fs.readFileSync('./common/products.json', 'utf8');
@@ -16,51 +16,47 @@ const main = () => {
       products.push(productParsed[product]);
     }
 
-    console.log(products);
-
-    // Task 2
-    countElem();
-    convertDateUpdated();
-    printTemplate();
-    modifyDateField();
-
-    // Task 3
-    convertWorksheet();
+    countElem(products);
+    convertDateUpdated(products);
 
   } catch (err) {
     console.log(err);
   }
 };
 
-// count elem in object
 
-const countElem = () => {
+const countElem = (products) => {
   console.log(`Product count is: ${products.length}`);
 };
 
-const convertDateUpdated = () => {
+const convertDateUpdated = (products) => {
   products.forEach(val => {
     val.dateUpdated = new Date(val.dateUpdated);
   });
+
+  printTemplate(products);
 };
 
-const printTemplate = () => {
+const printTemplate = (products) => {
   products.forEach(val => {
     const name = val.name;
     const price = val.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     const fromNow = formatDistance(val.dateUpdated, new Date());
     console.log(`${name} – ${price}VND – Cập nhật cách đây: ${fromNow}`);
   });
+  modifyDateField(products);
 };
 
-const modifyDateField = () => {
+const modifyDateField = (products) => {
   products.forEach(val => {
     val.updated = format(val.dateUpdated, 'MM/dd/yyyy'); // add field 'Updated' to array
     delete val.dateUpdated;
   });
+
+  convertWorksheet(products);
 };
 
-const convertWorksheet = () => {
+const convertWorksheet = (products) => {
   const prodWs = xlsx.utils.json_to_sheet(products);
   // **Taken from sheet: Optional: config columns width (character length)
     prodWs['!cols'] = [{ width: 20 }, { width: 15 }, { width: 20 }, { width: 20 }, { width: 20 }];
