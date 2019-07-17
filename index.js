@@ -1,4 +1,3 @@
-'use strict';
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 
@@ -31,13 +30,8 @@ var questions = [
 
 inquirer.prompt(questions).then(answers => {
   console.log(
-    ' Thank you. Hello',
-    chalk.blue(answers.name),
-    ', so you are',
-    chalk.red(answers.age),
-    'year old and from',
-    chalk.green(answers.homeTown),
-    '.'
+    `Thank you. Hello ${chalk.blue(answers.name)}, so you are ${chalk.red(
+      answers.age
+    )} year old and from ${chalk.green(answers.homeTown)}.`
   );
-  //   console.log(JSON.stringify(answers, null, '  '));
 });

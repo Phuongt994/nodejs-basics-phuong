@@ -1,21 +1,21 @@
 {
-  "name": "nodejs-basic-course-phuong",
+  "name": "nodejs-basics-phuong",
   "version": "1.0.0",
-  "description": "NodeJS assignments ",
+  "description": "NodeJS assignments week 2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Phuongt994/nodejs-basic-course-phuong.git"
+    "url": "git+https://github.com/Phuongt994/nodejs-basics-phuong.git"
   },
   "author": "Phuong A T",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Phuongt994/nodejs-basic-course-phuong/issues"
+    "url": "https://github.com/Phuongt994/nodejs-basics-phuong/issues"
   },
-  "homepage": "https://github.com/Phuongt994/nodejs-basic-course-phuong#readme",
+  "homepage": "https://github.com/Phuongt994/nodejs-basics-phuong#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "date-fns": "^2.0.0-alpha.27",
