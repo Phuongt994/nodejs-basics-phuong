@@ -1,23 +1,22 @@
 {
-  "name": "nodejs-basics-phuong",
-  "version": "1.0.0",
-  "description": "Assignments for NodeJS class @Nordic Coder 14/07 - 05/08/2019",
-  "dependencies": {},
-  "devDependencies": {
-    "eslint": "^5.16.0"
-  },
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www",
+    "dev": "nodemon --inspect ./bin/www",
+    "seed-data": "node migration/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Phuongt994/nodejs-basics-phuong.git"
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.6.7",
+    "morgan": "~1.9.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "git+https://github.com/Phuongt994/nodejs-basics-phuong/issues"
-  },
-  "homepage": "git+https://github.com/Phuongt994/nodejs-basics-phuong#readme"
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
 }
