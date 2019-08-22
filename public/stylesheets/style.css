@@ -1,20 +1,8 @@
-ul[data-dtr-index] {
-  width: 100%;
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-table.dataTable > tbody > tr.child span.dtr-title {
-  min-width: 130px;
-}
-#page-wrapper .breadcrumb {
-  margin-left: -30px;
-  margin-right: -30px;
-  margin-bottom: 0;
-}
-.header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header-bar > h1 {
-  margin-top: 0;
-  margin-bottom: 0;
+
+a {
+  color: #00B7FF;
 }
